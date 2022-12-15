@@ -17,7 +17,7 @@
     'installable': True,
 
     'data': [
-        'views/templates.xml',
+        'views/groma_templates_ui.xml',
     ],
     'assets': {
         'groma.assets_groma': [
