@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<templates xml:space="preserve">
+
+<t t-name="owl_playground.Card" owl="1">
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="..." />
+        <div class="card-body">
+            <h5 t-if="props.title">
+                Props title
+                <t t-out="props.title"/>
+            </h5>
+            <h5 t-if="props.slots.title"
+                class="card-title"
+                t-slot="title"/>
+            </h5>
+            <p class="card-text"
+               t-slot="default"/>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+</t>
+
+</templates>

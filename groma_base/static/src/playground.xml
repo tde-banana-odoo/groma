@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<templates xml:space="preserve">
+
+<t t-name="owl_playground.Main" owl="1">
+    <div>
+        <p>Hello World</p>
+        <Counter/>
+        <div class="ms-3">
+            <TodoList surname="'Caca'"/>
+        </div>
+        <Card>
+            <t t-set-slot="title">Zboobs</t>
+            Prout1
+            <t t-set-slot="title2">Zboobs</t>
+            Prout2
+        </Card>
+        <Card title="'youpie'">Prout22</Card>
+    </div>
+</t>
+
+</templates>

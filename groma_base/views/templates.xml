@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo><data>
+
+    <template id="groma.main" name="Groma Main">
+        <html>
+            <head>
+                <t t-call-assets="groma.assets_groma"/>
+            </head>
+
+            <body>
+            </body>
+        </html>
+    </template>
+
+</data></odoo>

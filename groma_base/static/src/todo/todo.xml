@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<templates xml:space="preserve">
+    <t t-name="owl_playground.TodoList" owl="1">
+        <h3>TodoList <t t-esc="props.surname"/></h3>
+        <ul>
+            <li t-foreach="todoItems" t-as="todo" t-key="todo.id">
+                <Todo id="todo.id"
+                      description="todo.description"
+                      done="todo.done"
+                      removeTodo.bind="removeTodo"
+                      toggleState.bind="toggleTodoState"/>
+            </li>
+        </ul>
+        <input type="text"
+               class="w-25 mb-3"
+               placeholder="Add a todo"
+               t-ref="inputAddTodo"
+               t-on-keyup="addTodo"/>
+    </t>
+
+    <t t-name="owl_playground.Todo" owl="1">
+        <div class="form-check">
+            <input type="checkbox"
+                   class="form-check-input"
+                   t-on-click="onClickDone"
+                   t-att-checked="props.done ? 'checked' : undefined"/>
+            <label class="form-check-label"
+                   t-att-for="props.id"
+                   t-att-class="props.done ? 'text-muted text-decoration-line-through' : ''">
+                <span t-esc="props.id"/> -
+                <span t-esc="props.description"/>
+            </label>
+            <span role="button"
+                  class="fa fa-remove ms-3 text-danger"
+                  t-on-click="onClickRemove"/>
+        </div>
+    </t>
+</templates>
